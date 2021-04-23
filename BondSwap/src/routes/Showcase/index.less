@@ -1,0 +1,195 @@
+@import "~src/style/mixins.less";
+
+@media screen and (min-width: 1000px) {
+  .showcase__page {
+    margin: 0 auto;
+    padding: 0 30px;
+    margin-top: 40px;
+    .showcase__container {
+      width: 1000px;
+      .showcase__header {
+        margin: 30px 0;
+        .showcase__title {
+            font-size: 34px;
+            font-weight: 600;
+            color: black;
+        }
+      }
+      .showcase__content {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        .collectibles {
+          width: calc(33.33% - 20px);
+          margin-right: 20px;
+          border-radius: 12px;
+          box-shadow: 0 2px 17px 0 rgba(0, 0, 0, 0.1);
+          background-color: #ffffff;
+          padding: 20px;
+          border: 1px solid #ffffff;
+          cursor: pointer;
+          .collectibles__img {
+            width: 100%;
+            margin: 40px 0;
+          }
+          .collectibles__link {
+            display: flex;
+            flex-direction: row;
+            cursor: pointer;
+            user-select: none;
+            justify-content: center;
+            .collectibles__name {
+              letter-spacing: 0.4px;
+              text-align: center;
+              color: #2a58b5;
+              font-weight: 600;
+              font-size: 18px;
+            }
+            i {
+              color: #2a58b5;
+              margin: auto 0;
+              margin-left: 5px;
+              font-size: 18px;
+            }
+          }
+          .collectibles__amount {
+            letter-spacing: 0.31px;
+            text-align: center;
+            color: #333333;
+            font-weight: 500;
+            margin-top: 10px;
+          }
+          .img__skeleton {
+            opacity: 0.71;
+            background-color: #d8d8d8;
+            height: 240px;
+            margin-bottom: 30px;
+          }
+          .text__skeleton {
+            width: 80%;
+            margin: 0 auto;
+            background-color: #d8d8d8;
+            opacity: 0.71;
+            height: 18px;
+            &.small {
+              width: 70%;
+              margin-top: 10px;
+            }
+          }
+          transition: 0.3s;
+          &:hover {
+            border: 1px solid #2a58b5;
+            transition: 0.3s;
+          }
+        }
+      }
+      .empty__content {
+        border-radius: 12px;
+        box-shadow: 0 2px 17px 0 rgba(0, 0, 0, 0.1);
+        background-color: #ffffff;
+        line-height: normal;
+        letter-spacing: 0.4px;
+        color: #666666;
+        font-weight: 500;
+        font-size: 18px;
+        padding: 60px;
+        text-align: center;
+        width: 50%;
+        margin: auto;
+        margin-top: calc(50vh - 200px);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .showcase__page {
+    padding: 20px 10px;
+    width: 100%;
+    .showcase__container {
+      .showcase__header {
+        margin: 30px 0;
+        .showcase__title {
+            font-size: 34px;
+            font-weight: 600;
+            color: black;
+        }
+      }
+      .showcase__content {
+        display: flex;
+        flex-direction: column;
+        .collectibles {
+          border-radius: 12px;
+          box-shadow: 0 2px 17px 0 rgba(0, 0, 0, 0.1);
+          background-color: #ffffff;
+          padding: 20px;
+          width: 100%;
+          .collectibles__img {
+            width: 100%;
+            margin: 40px 0;
+          }
+          .collectibles__link {
+            display: flex;
+            flex-direction: row;
+            cursor: pointer;
+            user-select: none;
+            justify-content: center;
+            .collectibles__name {
+              letter-spacing: 0.4px;
+              text-align: center;
+              color: #2a58b5;
+              font-weight: 600;
+              font-size: 18px;
+            }
+            i {
+              color: #2a58b5;
+              margin: auto 0;
+              margin-left: 5px;
+              font-size: 18px;
+            }
+          }
+          .collectibles__amount {
+            letter-spacing: 0.31px;
+            text-align: center;
+            color: #333333;
+            font-weight: 500;
+            margin-top: 10px;
+          }
+          .img__skeleton {
+            opacity: 0.71;
+            background-color: #d8d8d8;
+            height: 240px;
+            margin-bottom: 30px;
+            width: 100%;
+          }
+          .text__skeleton {
+            width: 80%;
+            margin: 0 auto;
+            background-color: #d8d8d8;
+            opacity: 0.71;
+            height: 18px;
+            &.small {
+              width: 70%;
+              margin-top: 10px;
+            }
+          }
+        }
+      }
+      .empty__content {
+        border-radius: 12px;
+        box-shadow: 0 2px 17px 0 rgba(0, 0, 0, 0.1);
+        background-color: #ffffff;
+        line-height: normal;
+        letter-spacing: 0.4px;
+        color: #666666;
+        font-weight: 500;
+        font-size: 18px;
+        padding: 60px;
+        text-align: center;
+        width: 100%;
+        margin: auto;
+        margin-top: 50px;
+      }
+    }
+  }
+}

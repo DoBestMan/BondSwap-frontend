@@ -1,0 +1,43 @@
+@import "~src/style/mixins.less";
+
+.m-pool-name {
+  width: 100%;
+  text-align: center;
+
+  &--compact {
+    max-width: 140px;
+  }
+
+  &--official {
+    height: 30px;
+  }
+
+  .name {
+    .htext();
+  }
+
+  .exclusive {
+    margin: 0;
+    padding: 0 4px;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: linear-gradient(90deg,  #ffde8c 20%, #fd7774 80%);
+    background-repeat: no-repeat;
+    background-size: 200% 200%;
+    animation: gradientChange infinite .8s linear;
+    position: absolute;
+    left: 0;
+    width: 100%;
+  }
+}
+
+@keyframes gradientChange  {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}

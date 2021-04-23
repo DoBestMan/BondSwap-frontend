@@ -1,0 +1,180 @@
+@import "./style/mixins.less";
+
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: AvenirLTStd-Black;
+  src: url('fonts/AvenirLTStd-Black.otf') format('opentype')
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style:  normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/Inter-Regular.woff2?v=3.15") format("woff2"),
+       url("fonts/Inter-Regular.woff?v=3.15") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style:  normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("fonts/Inter-Bold.woff2?v=3.15") format("woff2"),
+       url("fonts/Inter-Bold.woff?v=3.15") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style:  normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("fonts/Inter-Medium.woff2?v=3.15") format("woff2"),
+       url("fonts/Inter-Medium.woff?v=3.15") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style:  normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("fonts/Inter-SemiBold.woff2?v=3.15") format("woff2"),
+       url("fonts/Inter-SemiBold.woff?v=3.15") format("woff");
+}
+
+body {
+  margin: 0;
+  font-family: Inter,
+    sans-serif;
+  font-size: 13px;
+  line-height: @line-height;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: @bg-color;
+}
+
+html,
+body,
+#root {
+  height: 100vh;
+}
+
+html {
+  --antd-wave-shadow-color: transparent;
+}
+
+h4 {
+  font-size: @fong-size-large;
+}
+
+button,
+input,
+textarea {
+  .plain-element();
+}
+
+button {
+  user-select: none;
+}
+
+// radio
+.ant-radio-checked .ant-radio-inner {
+  border-color: rgba(25,64,176,1);
+}
+
+.ant-radio-inner::after {
+  background-color: rgba(25,64,176,1);
+}
+
+.ant-radio-wrapper {
+  color: #000;
+  margin-right: @padding;
+}
+
+.ant-radio-wrapper:hover .ant-radio,
+.ant-radio:hover .ant-radio-inner,
+.ant-radio-input:focus + .ant-radio-inner {
+  border-color: #cdcdcd;
+}
+
+// button
+.ant-btn {
+  box-shadow: none;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  font-size: 14px;
+  height: 32px;
+  text-shadow: none;
+  font-weight: 600;
+  background: @blue-dark;
+  color: #fff;
+
+  &:active,
+  &:hover,
+  &:focus {
+    background: rgba(63, 106, 235, 1);
+    border: 1px solid #fff;
+    color: #fff;
+  }
+
+  & + & {
+    margin-left: 24px;
+  }
+}
+// tabs
+.ant-tabs {
+  // color: @color-contrast--lighter;
+}
+
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: #000;
+}
+
+.ant-tabs-tab-btn:focus,
+.ant-tabs-tab-remove:focus,
+.ant-tabs-tab-btn:active,
+.ant-tabs-tab-remove:active {
+  color: #000;
+}
+
+.ant-tabs-tab:hover {
+  color: #000;
+  // color: @color-primary--lighter;
+}
+
+.ant-tabs-ink-bar {
+  background: #1940b0;
+}
+
+.ant-tabs-top > .ant-tabs-nav::before,
+.ant-tabs-bottom > .ant-tabs-nav::before,
+.ant-tabs-top > div > .ant-tabs-nav::before,
+.ant-tabs-bottom > div > .ant-tabs-nav::before {
+  // border-bottom-color: #6a6c7a;
+}
+
+// // table
+// .ant-table-thead > tr > th {
+//   color: @color-primary;
+//   background: @color-contrast--lighter;
+//   border-color: @color-primary--lighter2;
+// }
+
+.ant-table-thead > tr > th,
+.ant-table-tbody > tr > td,
+.ant-table tfoot > tr > th,
+.ant-table tfoot > tr > td {
+  padding: 10px;
+}
+.ant-table-tbody > tr {
+  &:hover {
+    
+
+    & > td {
+      background: #c1d3ff !important;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+@import "~src/style/mixins.less";
+
+@name: m-pair;
+
+.@{name} {
+  &--compact {
+    .htext();
+
+    &--spr {
+      max-width: 140px;
+    }
+
+    &--spc {
+      max-width: 100px;
+    }
+  }
+
+  &__ex {
+    font-style: normal;
+  }
+
+  &__div {
+    margin: 0 2px;
+  }
+
+  &--spr {
+    .@{name}__price {
+      margin-left: 10px;
+    }
+  }
+
+  &__price {
+    color: #3370ff;
+    font-weight: bold;
+  }
+}

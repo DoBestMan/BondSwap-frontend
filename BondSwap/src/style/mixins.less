@@ -1,0 +1,54 @@
+@import './vars.less';
+
+.plain-element() {
+  appearance: none;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-fill-color: currentColor;
+  cursor: pointer;
+}
+
+.pc-container(@margin: 0 auto) {
+  position: relative;
+  width: @pc-safe-width;
+  margin: @margin;
+}
+
+// .img-block() {
+//   display: block;
+//   width: 100%;
+// }
+
+// .input() {
+//   font-size: @font-size-norm;
+//   line-height: @line-height-input;
+// }
+
+// .full(@position: absolute) {
+//   position: @position;
+//   left: 0;
+//   top: 0;
+//   width: 100%;
+//   height: 100%;
+// }
+
+.placeholder(@rules) {
+  &::placeholder,
+  &::-webkit-input-placeholder {
+    @rules();
+  }
+}
+
+.placeholder-color(@color) {
+  .placeholder({ color: @color; });
+}
+
+.htext() {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}

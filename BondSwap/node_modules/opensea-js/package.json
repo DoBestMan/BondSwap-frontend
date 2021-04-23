@@ -1,0 +1,81 @@
+{
+  "name": "opensea-js",
+  "version": "1.1.11",
+  "description": "JavaScript SDK for the OpenSea marketplace. Let users buy or sell crypto collectibles and other cryptogoods, all on your own site!",
+  "files": [
+    "lib",
+    "webpack.config.js"
+  ],
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha test/**/*.ts --require ts-node/register --timeout 15000",
+    "lint": "tslint --project . 'src/**/*.ts' --fix",
+    "build": "npm run lint && tsc",
+    "docs": "npm run docsHtml",
+    "docsHtml": "./node_modules/.bin/typedoc --target ES5 --exclude src/abi --excludePrivate --out ./docs --ignoreCompilerErrors --mode file",
+    "docsMarkdown": "./node_modules/.bin/typedoc --theme markdown --target ES5 --exclude src/abi --excludePrivate --out ./docs_markdown --ignoreCompilerErrors --mode file"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ProjectOpenSea/opensea-js.git"
+  },
+  "keywords": [
+    "marketplace",
+    "crypto",
+    "collectibles",
+    "javascript",
+    "sdk",
+    "node",
+    "nft",
+    "non-fungible-tokens",
+    "ethereum",
+    "project-opensea",
+    "smart-contracts"
+  ],
+  "author": "OpenSea Developers",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ProjectOpenSea/opensea-js/issues"
+  },
+  "homepage": "https://docs.opensea.io/v1.0/reference",
+  "dependencies": {
+    "bignumber.js": "^4.1.0",
+    "ethereumjs-abi": "git+https://github.com/ProjectWyvern/ethereumjs-abi.git",
+    "ethereumjs-util": "^5.2.0",
+    "fbemitter": "^2.1.1",
+    "isomorphic-unfetch": "^2.1.1",
+    "json-loader": "^0.5.7",
+    "lodash": "^4.17.4",
+    "query-string": "^6.11.1",
+    "web3": "0.20.7",
+    "webpack": "^3.10.0",
+    "wyvern-js": "git+https://github.com/ProjectOpenSea/wyvern-js.git#v3.2.1",
+    "wyvern-schemas": "git+https://github.com/ProjectOpenSea/wyvern-schemas.git#v0.11.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint && npm run build && git add lib/*"
+    }
+  },
+  "devDependencies": {
+    "@types/chai": "4.2.9",
+    "@types/fbemitter": "^2.0.32",
+    "@types/lodash": "^4.14.92",
+    "@types/node": "^9.3.0",
+    "@types/node-fetch": "2.5.5",
+    "@types/query-string": "^6.1.0",
+    "chai": "^4.1.2",
+    "husky": "^4.2.3",
+    "mocha": "^5.2.0",
+    "mocha-typescript": "^1.1.15",
+    "ts-node": "^6.1.0",
+    "tslint": "^5.9.1",
+    "tslint-eslint-rules": "^4.1.1",
+    "typedoc": "^0.11.1",
+    "types-bn": "^0.0.1",
+    "types-ethereumjs-util": "0.0.8",
+    "typescript": "^2.6.2",
+    "typescript-eslint-parser": "^16.0.0",
+    "web3-typescript-typings": "^0.9.3"
+  }
+}

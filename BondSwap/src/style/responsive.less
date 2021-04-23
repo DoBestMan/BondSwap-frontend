@@ -1,0 +1,22 @@
+@mediumsize: 1100px;
+@desktop: 1440px;
+@laptop: 1080px;
+@mixin breakpoint($point) {
+  @if $point == desktop {
+    @media (min-width: @mediumsize) { @content ; }
+  }
+  @else if $point == mobile {
+    @media (max-width: @mediumsize)  { @content ; }
+  }
+}
+@mixin responsive($breakpoints...) {
+  @if index($breakpoints, desktop) {
+    @media (min-width: @desktop) { @content ; }
+  }
+  @if index($breakpoints, laptop) {
+    @media (min-width: @laptop) and (max-width: calc(#{@desktop} - 1px)) { @content ; }
+  }
+  @if index($breakpoints, mobile) {
+    @media (max-width: calc(#{@laptop} - 1px))  { @content ; }
+  }
+}

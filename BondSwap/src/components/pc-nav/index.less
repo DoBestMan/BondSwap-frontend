@@ -1,0 +1,52 @@
+@import "~src/style/mixins.less";
+
+@media screen and (min-width: 1000px) {
+  .m-nav {
+    background-color: @blue-dark;
+    width: 240px;
+    min-width: 240px;
+    &__container {
+      display: flex;
+      flex-direction: column;
+      background-color: @blue-dark;
+      position: fixed;
+      width: 240px;
+      height: 100%;
+      z-index: 11;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .m-nav {
+    background-color: @blue-dark;
+    width: 240px;
+    min-width: 240px;
+    position: fixed;
+    top: 0;
+    z-index: 20;
+    &__container {
+      display: flex;
+      flex-direction: column;
+      background-color: @blue-dark;
+      position: fixed;
+      width: 240px;
+      height: 100%;
+      z-index: 11;
+    }
+  }
+}
+.social {
+  margin-top: auto;
+  display: flex;
+  flex-direction: row;
+  margin-left: 30px;
+  margin-bottom: 50px;
+  a {
+    margin-right: 30px;
+    i {
+      color: white;
+      font-size: 20px;
+    }
+  }
+}

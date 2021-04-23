@@ -1,0 +1,188 @@
+@import "~src/style/mixins.less";
+
+@media screen and (min-width: 1000px) {
+  .pool__page {
+    margin: 0 auto;
+    // margin: 0 30px;
+    margin-top: 40px;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    .pool__container {
+      width: 1200px;
+      margin: 0 30px;
+      // min-width: 1200px;
+      .pool__header {
+        display: flex;
+        flex-direction: row;
+        margin-top: 30px;
+        .pool__list {
+          display: flex;
+          flex-direction: row;
+          cursor: pointer;
+          user-select: none;
+          .text {
+            letter-spacing: 0.79px;
+            color: #222222;
+            font-weight: 600;
+            font-size: 28px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+          }
+          i {
+            color: #2a58b5;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-left: 10px;
+            font-size: 34px;
+            font-weight: 600;
+          }
+        }
+        .view__type {
+          margin: auto 0;
+          margin-left: 20px;
+          cursor: pointer;
+          user-select: none;
+          i {
+            color: #D8D8D8;
+            font-size: 24px;
+            transition: 0.3s;
+            &.selected {
+              color: #2a58b5;
+            }
+          }
+        }
+        .pool__dropdown {
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          border-radius: 4px;
+          box-shadow: 0 2px 13px 0 rgba(0, 0, 0, 0.21);
+          background-color: #ffffff;
+          padding: 10px 0;
+          margin-top: 60px;
+          z-index: 10;
+          .option__row {
+            display: flex;
+            flex-direction: row;
+            width: 200px;
+            cursor: pointer;
+            .text {
+              padding: 10px;
+              padding-left: 15px;
+              letter-spacing: 0.31px;
+              color: #343434;
+              font-weight: 500;
+              &.selected {
+                color: #2a58b5;
+              }
+            }
+            img {
+              margin-left: auto;
+              margin-right: 15px;
+              width: 20px;
+            }
+            transition: 0.3s;
+            &:hover {
+              background-color: #f8f8f8;
+              transition: 0.3s;
+            }
+          }
+        }
+      }
+      .pool__description {
+        color: #333333;
+        font-weight: 500;
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .pool__page {
+    margin: 0 auto;
+    padding: 0 25px;
+    width: 100%;
+    .pool__container {
+      .pool__header {
+        display: flex;
+        flex-direction: column;
+        margin: 30px 0;
+        .pool__list {
+          display: flex;
+          flex-direction: row;
+          cursor: pointer;
+          user-select: none;
+          .text {
+            letter-spacing: 0.79px;
+            color: #222222;
+            font-weight: 600;
+            font-size: 24px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+          }
+          i {
+            color: #2a58b5;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-left: 10px;
+            font-size: 34px;
+            font-weight: 600;
+          }
+        }
+        .view__type {
+          display: none;
+        }
+        .pool__dropdown {
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          border-radius: 4px;
+          box-shadow: 0 2px 13px 0 rgba(0, 0, 0, 0.21);
+          background-color: #ffffff;
+          padding: 10px 0;
+          margin-top: 60px;
+          z-index: 10;
+          .option__row {
+            display: flex;
+            flex-direction: row;
+            width: 200px;
+            cursor: pointer;
+            .text {
+              padding: 10px;
+              padding-left: 15px;
+              letter-spacing: 0.31px;
+              color: #343434;
+              font-weight: 500;
+              &.selected {
+                color: #2a58b5;
+              }
+            }
+            img {
+              margin-left: auto;
+              margin-right: 15px;
+              width: 20px;
+            }
+            transition: 0.3s;
+            &:hover {
+              background-color: #f8f8f8;
+              transition: 0.3s;
+            }
+          }
+        }
+      }
+      .pool__description {
+        color: #333333;
+        font-weight: 500;
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
